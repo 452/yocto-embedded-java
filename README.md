@@ -6,7 +6,7 @@ git branch warrior
 DISTRO_VERSION 2.7.1
 SSTATE_MIRRORS sstate.yoctoproject.org/2.7.1
 ```sh
-mkdir downloads builded-images;chmod 777 downloads builded-images
+mkdir -p downloads builded-images;chmod 777 downloads builded-images
 docker build -f docker/embedded-java-minimal-example/Dockerfile -t embedded-java docker/embedded-java-minimal-example
 docker run --rm -it -v $(pwd)/downloads:/downloads -v $(pwd)/builded-images --name embedded-java embedded-java
 ```
