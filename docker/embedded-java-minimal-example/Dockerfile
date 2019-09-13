@@ -22,9 +22,9 @@ ENV HOME /home/$USER_NAME
 
 RUN groupadd -r $USER_NAME \
   && useradd -r -g $USER_NAME $USER_NAME
-RUN mkdir -p /home/$USER_NAME/downloads \
-  && chown -R $USER_NAME:$USER_NAME /home/$USER_NAME/downloads
-VOLUME /home/$USER_NAME/downloads
+RUN mkdir -p /home/$USER_NAME \
+  && chown -R $USER_NAME:$USER_NAME /home/$USER_NAME
+
 USER $USER_NAME
 
 WORKDIR $HOME
