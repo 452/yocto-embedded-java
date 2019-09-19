@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf /builded-images/*
+rm -rf conf /builded-images/*
 source poky/oe-init-build-env
 bitbake-layers add-layer ../meta-raspberrypi
 bitbake-layers add-layer ../meta-openembedded/meta-oe
